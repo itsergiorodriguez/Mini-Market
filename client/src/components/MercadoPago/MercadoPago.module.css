@@ -1,0 +1,45 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: hsla(61, 66%, 67%, 0.767); /* Cambia el valor de opacidad */
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ajusta el valor según el ancho deseado para el contenedor */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family:  'Poppins', sans-serif;
+}
+
+.customTitleFont {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.customConfirmButton {
+  background-color: #ff8000 !important;
+  color: white;
+}
+
+.button {
+  background-color: #ff8000;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  font-family:  'Poppins', sans-serif;
+}
+.button.fade-out {
+    background-color: #ff8000;
+    opacity: 0.5; /* Establece la opacidad para el desvanecimiento */
+  }
+.button:hover {
+  background-color: #af570a;
+}
