@@ -38,7 +38,11 @@ module.exports = (sequelize) => {
             type: DataTypes.FLOAT,
             allowNull: false,
         },
-
-
+        state:{
+            type: DataTypes.BOOLEAN, 
+            allowNull: true,
+            defaultValue: true
+        }
+            
     }, { timestamps: false, freezeTableName: true })
 };

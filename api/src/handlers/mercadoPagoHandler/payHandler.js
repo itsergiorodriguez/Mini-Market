@@ -1,7 +1,7 @@
-const { sendMail } = require("../routerNodemailer")
 const mercadopago = require("mercadopago");
-require ('dotenv').config();
+require('dotenv').config()
 const {ACCESS_TOKEN} = process.env
+
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
 	access_token: `${ACCESS_TOKEN}`,
@@ -41,7 +41,6 @@ const payHandler = async (req, res) => {
 	try {
 		const response = await mercadopago.preferences.create(preference);
 		const preferenceId = response.body.id;
-		await sendMail({ name: req.body.description, price: req.body.price, quantity: req.body.quantity, email: req.body.email});
 		res.json({ id: preferenceId });
 	  } catch (error) {
 		console.error("Error:", error);

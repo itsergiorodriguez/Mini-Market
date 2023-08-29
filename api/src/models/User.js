@@ -21,17 +21,19 @@ module.exports = (sequelize) => {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            // validate:{
-
-            // }
-        },
+        },      
        
         password: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        admin:{
+            type: DataTypes.BOOLEAN, 
+            allowNull: false,
+            defaultValue: false
+        }
        
 
 
-    }, { timestamps: false, freezeTableName: true })
+    }, {freezeTableName: true })
 };
